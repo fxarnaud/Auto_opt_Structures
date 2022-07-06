@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Auto_opt_Structures.Result_View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Auto_opt_Structures"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1500">
+    <Grid>
+        <ListView HorizontalAlignment="Left" Height="550" Margin="25,10,0,0" VerticalAlignment="Top" Width="1500" Name="lvResults">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Label Structure" Width="100" DisplayMemberBinding="{Binding Label}" />
+                    <GridViewColumn Header="Formule" Width="250" DisplayMemberBinding="{Binding Formule}" />                    
+                    <GridViewColumn Header="Log Creation Structure" Width="700" DisplayMemberBinding="{Binding Code_error}"  />
+                    <GridViewColumn Header="Options Utilisateur" Width="430" DisplayMemberBinding="{Binding Comment}"  />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</UserControl>

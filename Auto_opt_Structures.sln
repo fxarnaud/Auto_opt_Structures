@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto_opt_Structures", "Auto_opt_Structures.csproj", "{57F3FF8B-49D2-474A-B0F8-0EA06B1E9552}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57F3FF8B-49D2-474A-B0F8-0EA06B1E9552}.Debug|x64.ActiveCfg = Debug|x64
+		{57F3FF8B-49D2-474A-B0F8-0EA06B1E9552}.Debug|x64.Build.0 = Debug|x64
+		{57F3FF8B-49D2-474A-B0F8-0EA06B1E9552}.Release|x64.ActiveCfg = Release|x64
+		{57F3FF8B-49D2-474A-B0F8-0EA06B1E9552}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77468433-C526-4872-96E3-6C5DEDC1F541}
+	EndGlobalSection
+EndGlobal
