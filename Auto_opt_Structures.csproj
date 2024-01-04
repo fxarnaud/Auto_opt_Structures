@@ -7,7 +7,7 @@
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Auto_opt_Structures</RootNamespace>
-    <AssemblyName>test2_fx.esapi</AssemblyName>
+    <AssemblyName>ContoursAutomatiques_v4.7.esapi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>X:\ARNAUD_FX\ECLIPSE_SCRIPTING\Auto_Structures_dll\</OutputPath>
+    <OutputPath>\\srv015\SF_COM\ARNAUD_FX\ECLIPSE_SCRIPTING\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -47,10 +47,10 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.API">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Varian\Vision\API 15.6\VMS.TPS.Common.Model.API.dll</HintPath>
+      <HintPath>\\srv015\SF_COM\ARNAUD_FX\ECLIPSE_SCRIPTING\DOCS+DLL+EXE+EXEMPLES_SCRIPTING\APIv15\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Varian\Vision\API 15.6\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>\\srv015\SF_COM\ARNAUD_FX\ECLIPSE_SCRIPTING\DOCS+DLL+EXE+EXEMPLES_SCRIPTING\APIv15\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

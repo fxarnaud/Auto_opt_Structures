@@ -26,7 +26,7 @@ namespace VMS.TPS
 
         public void Execute(ScriptContext context )
         {
-            bool _DebugMode = true;  //Modify this to debug mode
+            bool _DebugMode = false;  //Modify this to debug mode
 
             var directorypath = @"\\srv015\radiotherapie\SCRIPTS_ECLIPSE\Opt_Structures\";
             //var directorypath = @"\\srv015\SF_COM\LACAZE T\Opt_Structures\";

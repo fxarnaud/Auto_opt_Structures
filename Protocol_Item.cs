@@ -62,6 +62,7 @@ namespace VMS.TPS
                 to_keep = false;
                 structure_label = fields[0];  //TESTER ICI QUE LE LIBELLE NE DOIT PAS DEPASSER XX CARACTERES !
                 structure_operation = fields[1];
+
                 Separate_Items(fields[1], ss);  //CALLING METHOD to regex blocs A, bloc B and operator to apply  
 
                 if (string.IsNullOrEmpty(fields[2]) != true)
@@ -185,7 +186,7 @@ namespace VMS.TPS
             {
                 // List of regular expressions in order to translate .csv files and put each detected values in variables
 
-                string two_blocs_pattern = @"^\((?<strucA>[^\)]+)\)(?<operator>(?i)[I|+|-](?-i))\((?<strucB>[^\)]+)\)";
+                string two_blocs_pattern = @"^\((?<strucA>[^\)]+)\)(?<operator>(?i)[I|+|_|\-](?-i))\((?<strucB>[^\)]+)\)";
                 string one_bloc_pattern_operator = @"^(?<strucA>[^(\%|\#|\-]+)(?<operator>(\%|\#|\-))(?<value>[0-9]+\-[0-9]+|[0-9]+)";
                 string one_bloc_pattern_asymetric = @"^(?<strucA>[^(\%|\#|\-|\*]+)(?<operator>(\*))\[(?<value>[0-9]+\,[0-9]+\,[0-9]+\,[0-9]+\,[0-9]+\,[0-9]+)\]";
                 string one_bloc_pattern = @"^(?<strucA>[^(\%|\#|\-|\*]+)";

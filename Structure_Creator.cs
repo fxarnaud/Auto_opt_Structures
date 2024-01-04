@@ -134,7 +134,7 @@ namespace VMS.TPS
                     #region OPERATIONS BETWEEN TWO STRUCTURES TO PROCESS
                     case 2:
 
-                        if ((struct_details.Operator_A_B != "+") && (struct_details.Operator_A_B != "-") && (struct_details.Operator_A_B != "I" && struct_details.Operator_A_B != "i"))
+                        if ((struct_details.Operator_A_B != "+") && (struct_details.Operator_A_B != "-") && (struct_details.Operator_A_B != "_") && (struct_details.Operator_A_B != "I" && struct_details.Operator_A_B != "i"))
                         {
                             struct_details.Code_error = "ERREUR*** : Operateur (" + struct_details.Operator_A_B + ") sur 2 structures non reconnu";
                         }
@@ -166,10 +166,10 @@ namespace VMS.TPS
 
                                 AddStructures(ss, tmpA, tmpB, created_structure, struct_details);
                                 //struct_details.Code_error = struct_details.Original_struc_A_label + " et " + struct_details.Original_struc_B_label + " additionnés ";
-                                struct_details.Code_error = "-";
+                                struct_details.Code_error = "+";
                             }
-
-                            if (struct_details.Operator_A_B == "-")
+   
+                            if (struct_details.Operator_A_B == "-" || struct_details.Operator_A_B == "_")
                             //Substraction between two structures
                             {
                                 tmpA.SegmentVolume = struct_details.Original_struc_A.Margin(struct_details.Margin_A);
@@ -194,6 +194,11 @@ namespace VMS.TPS
                                    // struct_details.Code_error = "Structures soustraites ";
                                     struct_details.Code_error = "-";
                                     struct_details.Comment = "Bloc A de type PTV/GTV ou label structure = RingPTVParoi ou RingPTVSein";
+                                }
+                                else if (struct_details.Operator_A_B =="_")
+                                {
+                                    struct_details.Code_error = "_";
+                                    struct_details.Comment = "Operation _ utilisée. Structure A non supprimée même si pas d'intersection avec B";
                                 }
                                 else
                                 {
@@ -679,7 +684,7 @@ namespace VMS.TPS
                                     }
                                     else
                                     {
-                                        if (struct_details.Operator_A_B == "-") //Substraction of two structures 
+                                        if (struct_details.Operator_A_B == "-" || struct_details.Operator_A_B == "_") //Substraction of two structures 
                                         {
                                             if (struct_details.Original_struc_A == null || struct_details.Original_struc_A.IsEmpty)
                                             {
